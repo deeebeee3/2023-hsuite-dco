@@ -1,0 +1,17 @@
+### GET a user by email
+GET  http://localhost:3000/users?email=dco-administrator@protonmail.com
+Authorization: Bearer {{jwt}}
+
+### UPDATE a user
+PATCH http://localhost:3000/users?email=dco-administrator@protonmail.com
+content-type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+    "email": "dco-administrator@protonmail.com",
+    "password": "pw"
+}
+
+### DELETE a user
+DELETE  http://localhost:3000/users?email=dco-administrator@protonmail.com
+Authorization: Bearer {{jwt}}

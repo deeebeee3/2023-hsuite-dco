@@ -1,0 +1,129 @@
+{
+  "APP_NAME": "Registro de Oficina",
+  "LOGIN": {
+    "TITLE": "Iniciar sesión",
+    "EMAIL_LABEL": "Correo electrónico",
+    "PASSWORD_LABEL": "Contraseña",
+    "EMAIL_REQUIRED": "El correo electrónico es obligatorio",
+    "PASSWORD_REQUIRED": "La contraseña es obligatoria",
+    "LOGIN_BUTTON": "Iniciar sesión",
+    "REGISTER_BUTTON": "Registro",
+    "RECOVER_PASSWORD_BUTTON": "Recuperar contraseña",
+    "RECOVER_PASSWORD_TOAST_MESSAGE": "Correo electrónico de recuperación de contraseña enviado"
+  },
+  "REGISTER": {
+    "TITLE": "Registro",
+    "EMAIL_LABEL": "Correo electrónico",
+    "PASSWORD_LABEL": "Contraseña",
+    "CONFIRM_PASSWORD_LABEL": "Confirmar Contraseña",
+    "EMAIL_REQUIRED": "El correo electrónico es obligatorio",
+    "PASSWORD_REQUIRED": "La contraseña es obligatoria",
+    "CONFIRM_PASSWORD_REQUIRED": "La confirmación de la contraseña es obligatoria",
+    "REGISTER_BUTTON": "Registro",
+    "LOGIN_BUTTON": "Iniciar sesión"
+  },
+  "RECOVER_PASSWORD": {
+    "TITLE": "Recuperar contraseña",
+    "EMAIL_LABEL": "Correo electrónico",
+    "EMAIL_REQUIRED": "El correo electrónico es obligatorio",
+    "RECOVER_PASSWORD_BUTTON": "Recuperar contraseña",
+    "LOGIN_BUTTON": "Iniciar sesión"
+  },
+  "PROFILE": {
+    "TAB": "Perfil",
+    "EMAIL_LABEL": "Correo electrónico",
+    "PASSWORD_LABEL": "Contraseña",
+    "SAVE_CHANGES_BUTTON": "Guardar cambios",
+    "DELETE_ACCOUNT_BUTTON": "Eliminar cuenta",
+    "DELETE_ACCOUNT_ALERT": {
+      "HEADER": "Eliminar cuenta",
+      "MESSAGE": "¿Estás seguro de que quieres eliminar tu cuenta?",
+      "CANCEL_BUTTON": "Cancelar",
+      "DELETE_BUTTON": "Eliminar"
+    }
+  },
+  "DASHBOARD": {
+    "TAB": "Panel de Control",
+    "DOCUMENTS_TITLE": "Mis Documentos",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Buscar Documentos",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Estado",
+      "PENDING": "Pendiente",
+      "APPROVED": "Aprobado",
+      "REJECTED": "Rechazado"
+    }
+  },
+  "DOCUMENTS": {
+    "TAB": "Documentos",
+    "SUBMIT_FORM": {
+      "PHOTO_LABEL": "Foto de Identidad (PDF/JPG)",
+      "PHOTO_SUBTITLE": "Por favor, suba una foto de usted en un formato de pasaporte.",
+      "TITLE": "Formulario de Envío",
+      "FIRSTNAME_LABEL": "Nombre de pila",
+      "FIRSTNAME_PLACEHOLDER": "Ponga su primer nombre",
+      "PATERNAL_SURNAME_LABEL": "Apellido paterno",
+      "PATERNAL_SURNAME_PLACEHOLDER": "Ingrese su apellido paterno",
+      "MATERNAL_SURNAME_LABEL": "Apellido Materno",
+      "MATERNAL_SURNAME_PLACEHOLDER": "Ingresa tu apellido materno",
+      "GENDER_LABEL": "Sex",
+      "GENDER_SELECT_PLACEHOLDER": "Selecciona tu sexo",
+      "GENDER_OPTIONS": {
+        "MALE": "Masculino",
+        "FEMALE": "Femenina"
+      },
+      "NATIVITY_LABEL": "Natividad",
+      "NATIVITY_PLACEHOLDER": "Introduce tu nacimiento",
+      "COUNTRY_OF_NATIONALITY_LABEL": "Nacionalidad",
+      "COUNTRY_OF_NATIONALITY_PLACEHOLDER": "Selecciona tu Nacionalidad",
+      "COUNTRY_OF_CITIZENSHIP_LABEL": "Ciudadanía",
+      "COUNTRY_OF_CITIZENSHIP_PLACEHOLDER": "Seleccione su país de ciudadanía",
+      "DATE_OF_BIRTH_LABEL": "Fecha de nacimiento",
+      "DATE_OF_BIRTH_PLACEHOLDER": "Selecciona tu fecha de nacimiento",
+      "CITY_OF_BIRTH_LABEL": "Ciudad de nacimiento",
+      "CITY_OF_BIRTH_PLACEHOLDER": "Entra en tu ciudad de nacimiento",
+      "ADDRESS_RESIDENCY_LABEL": "Dirección de residencia",
+      "ADDRESS_RESIDENCY_PLACEHOLDER": "Ingrese su dirección de residencia",
+      "ADDRESS_DOMICILE_LABEL": "Dirección doméstica",
+      "ADDRESS_DOMICILE_PLACEHOLDER": "Ingrese su dirección de domicilio",
+      "PASSPORT_ID_LABEL": "Pasaporte",
+      "PASSPORT_ID_PLACEHOLDER": "Ingrese su número de identificación de pasaporte",
+      "DRIVERS_LICENCE_ID_LABEL": "Licencia de conducir",
+      "DRIVERS_LICENCE_ID_PLACEHOLDER": "Ingrese su número de licencia de conducir",
+      "NOTES_LABEL": "Notas",
+      "NOTES_PLACEHOLDER": "Inserte en este campo toda la información necesaria que desee notificar a la administración para cargar en su nuevo documento de identificación, como una nueva dirección de residencia, el apellido de la madre, etc.",
+      "ID_CARD_LABEL": "Tarjeta de identificación (PDF/JPG)",
+      "DRIVERS_LICENCE_PHOTO_LABEL": "Licencia de conducir (PDF/JPG)",
+
+      "DRAG_AND_DROP_LABEL": "Arrastre y suelte su archivo aquí",
+      "CHOOSE_FILE_LABEL": "Elegir archivo",
+      "SUBMIT_BUTTON": "Enviar"
+    }
+  },
+  "ADMIN": {
+    "TAB": "Admin",
+    "TITLE": "Administrar documentos de usuarios",
+    "PENDING_BADGE": "Documentos pendientes:",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Buscar documentos",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Estado",
+      "PENDING": "Pendiente",
+      "APPROVED": "Aprobado",
+      "REJECTED": "Rechazado"
+    },
+    "ADMIN_FORM": {
+      "TITLE": "Enviar datos de usuario para la aprobación del documento",
+      "SUBTITLE": "Proporcione los datos del usuario en el siguiente formulario para aprobar el documento.",
+      "CERTIFIED_HASH_LABEL": "Hash certificado",
+      "CERTIFIED_HASH_PLACEHOLDER": "Ingrese el hash certificado"
+    }
+  },
+  "LOGOUT": {
+    "TAB": "Cerrar sesión",
+    "LOGOUT_ALERT": {
+      "CONFIRMATION": "Confirmación",
+      "LOGOUT_CONFIRMATION": "¿Estás seguro de que quieres cerrar sesión?",
+      "CANCEL": "Cancelar",
+      "LOGOUT": "Cerrar sesión"
+    }
+  }
+}

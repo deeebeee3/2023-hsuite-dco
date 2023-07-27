@@ -1,0 +1,343 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      {{ 'DOCUMENTS.SUBMIT_FORM.TITLE' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <ion-card class="submit-card" *ngIf="!showSubmitCard">
+    <ion-card-header>
+      <ion-card-title
+        >{{ 'DOCUMENTS.SUBMIT_FORM.TITLE' | translate }}</ion-card-title
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="submitForm" (ngSubmit)="submit()">
+        <div (click)="fileInput.click()" style="cursor: pointer">
+          <ion-item lines="none">
+            <ion-label position="stacked"
+              >{{'DOCUMENTS.SUBMIT_FORM.PHOTO_LABEL' | translate}}</ion-label
+            >
+            <input
+              formControlName="filePassportPhoto"
+              #fileInput
+              type="file"
+              accept="image/*"
+              (change)="onPhotoSelect($event)"
+              style="display: none"
+            />
+            <div class="square">
+              <img
+                [src]="passportPhotoUrl"
+                [ngStyle]="{'width': '200px', 'height': '200px', 'border': '2px solid black', 'border-radius': '5px'}"
+                alt="{{'DOCUMENTS.SUBMIT_FORM.PHOTO_LABEL' | translate}}"
+              />
+            </div>
+            <!-- <p style="text-align: center">{{'DOCUMENTS.SUBMIT_FORM.PHOTO_SUBTITLE' | translate}}</p> -->
+          </ion-item>
+        </div>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.FIRSTNAME_LABEL' | translate}}</ion-label
+          >
+          <ion-input
+            formControlName="firstName"
+            type="text"
+            fill="outline"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.FIRSTNAME_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.PATERNAL_SURNAME_LABEL' |
+            translate}}</ion-label
+          >
+          <ion-input
+            formControlName="paternalSurname"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.PATERNAL_SURNAME_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.MATERNAL_SURNAME_LABEL' |
+            translate}}</ion-label
+          >
+          <ion-input
+            formControlName="maternalSurname"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.MATERNAL_SURNAME_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.GENDER_LABEL' | translate}}</ion-label
+          >
+          <ion-select
+            formControlName="gender"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.GENDER_SELECT_PLACEHOLDER' | translate}}"
+          >
+            <ion-select-option value="male"
+              >{{'DOCUMENTS.SUBMIT_FORM.GENDER_OPTIONS.MALE' |
+              translate}}</ion-select-option
+            >
+            <ion-select-option value="female"
+              >{{'DOCUMENTS.SUBMIT_FORM.GENDER_OPTIONS.FEMALE' |
+              translate}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.NATIVITY_LABEL' | translate}}</ion-label
+          >
+          <ion-input
+            formControlName="nativity"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.NATIVITY_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_NATIONALITY_LABEL' | translate
+            }}</ion-label
+          >
+
+          <ion-input
+            formControlName="countryNationality"
+            type="text"
+            readonly="true"
+            (click)="openCountriesPopoverNationality($event)"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_NATIONALITY_PLACEHOLDER' | translate}}"
+            [value]="selectedCountryNationality || ''"
+          >
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_CITIZENSHIP_LABEL' | translate
+            }}</ion-label
+          >
+
+          <ion-input
+            formControlName="countryCitizenship"
+            type="text"
+            readonly="true"
+            (click)="openCountriesPopoverCitizenship($event)"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_CITIZENSHIP_PLACEHOLDER' | translate}}"
+            [value]="selectedCountryCitizenship || ''"
+          >
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.DATE_OF_BIRTH_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-datetime
+            presentation="date"
+            formControlName="dateOfBirth"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.CITY_OF_BIRTH_LABEL' |
+            translate}}</ion-label
+          >
+          <ion-input
+            formControlName="cityOfBirth"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.CITY_OF_BIRTH_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_RESIDENCY_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-input
+            formControlName="addressResidency"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_RESIDENCY_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_DOMICILE_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-input
+            formControlName="addressDomicile"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_DOMICILE_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.PASSPORT_ID_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-input
+            formControlName="idPassport"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.PASSPORT_ID_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.DRIVERS_LICENCE_ID_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-input
+            formControlName="driversLicenceNumber"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.DRIVERS_LICENCE_ID_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.NOTES_LABEL' | translate}}</ion-label
+          >
+          <textarea
+            formControlName="notes"
+            type="text"
+            class="notes-textarea"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.NOTES_PLACEHOLDER' | translate}}"
+          ></textarea>
+        </ion-item>
+
+        <ion-item lines="none">
+          <div style="display: flex; flex-direction: column; width: 100%">
+            <ion-label position="stacked"
+              >{{ 'DOCUMENTS.SUBMIT_FORM.ID_CARD_LABEL' | translate
+              }}</ion-label
+            >
+            <div
+              id="dropzone"
+              (dragover)="onDragOver($event)"
+              (drop)="onDropFileIDCard($event)"
+            >
+              <ion-label
+                >{{ 'DOCUMENTS.SUBMIT_FORM.DRAG_AND_DROP_LABEL' | translate
+                }}</ion-label
+              >
+              <ion-button
+                fill="clear"
+                color="primary"
+                (click)="selectFileIDCard()"
+              >
+                <ion-icon slot="start" name="cloud-upload-outline"></ion-icon>
+                <span
+                  >{{ 'DOCUMENTS.SUBMIT_FORM.CHOOSE_FILE_LABEL' | translate
+                  }}</span
+                >
+              </ion-button>
+              <input
+                formControlName="fileIDCard"
+                #fileInput
+                type="file"
+                id="fileInputIDCard"
+                accept="application/pdf,image/*"
+                (change)="onFileIDCardSelect($event)"
+                style="display: none"
+              />
+              <ion-item *ngIf="fileIDCard" lines="none"
+                ><ion-label>{{ fileIDCardName }}</ion-label></ion-item
+              >
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-item lines="none">
+          <div style="display: flex; flex-direction: column; width: 100%">
+            <ion-label position="stacked"
+              >{{ 'DOCUMENTS.SUBMIT_FORM.DRIVERS_LICENCE_PHOTO_LABEL' |
+              translate }}</ion-label
+            >
+            <div
+              id="dropzone"
+              (dragover)="onDragOver($event)"
+              (drop)="onDropDriversLicencePhoto($event)"
+            >
+              <ion-label
+                >{{ 'DOCUMENTS.SUBMIT_FORM.DRAG_AND_DROP_LABEL' | translate
+                }}</ion-label
+              >
+              <ion-button
+                fill="clear"
+                color="primary"
+                (click)="selectFileDriversLicencePhoto()"
+              >
+                <ion-icon slot="start" name="cloud-upload-outline"></ion-icon>
+                <span
+                  >{{ 'DOCUMENTS.SUBMIT_FORM.CHOOSE_FILE_LABEL' | translate
+                  }}</span
+                >
+              </ion-button>
+              <input
+                formControlName="fileDriversLicencePhoto"
+                #fileInput
+                type="file"
+                id="fileInputDriversLicencePhoto"
+                accept="application/pdf,image/*"
+                (change)="onFileDriversLicencePhotoSelect($event)"
+                style="display: none"
+              />
+              <ion-item *ngIf="fileDriversLicencePhoto" lines="none"
+                ><ion-label
+                  >{{ fileDriversLicencePhotoName }}</ion-label
+                ></ion-item
+              >
+            </div>
+          </div>
+        </ion-item>
+
+        <ion-button
+          type="submit"
+          expand="block"
+          [disabled]="!submitForm.valid || !fileIDCard || waitingResponse"
+          class="submit-button ion-margin-top"
+          (click)="openLoader()"
+        >
+          {{ 'DOCUMENTS.SUBMIT_FORM.SUBMIT_BUTTON' | translate }}
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="ion-text-center" *ngIf="showSubmitCard">
+    <ion-card-header>
+      <h1>
+        <ion-icon name="checkmark-circle-outline" color="dark"></ion-icon>
+        Document submitted
+      </h1>
+    </ion-card-header>
+    <ion-card-content>
+      <p>
+        Document already submitted. Please click here to see the status of your
+        request.
+      </p>
+      <ion-button routerLink="/tabs/dashboard">Go to Dashboard</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

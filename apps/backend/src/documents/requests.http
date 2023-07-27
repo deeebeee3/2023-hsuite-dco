@@ -1,0 +1,165 @@
+### GET all Documents (for Admin users only)
+GET  http://localhost:3000/documents
+Authorization: Bearer {{jwt}}
+
+### GET a Document by userId
+GET  http://localhost:3000/documents/by-userid?userid=3708d16f-ed3f-4380-a459-ab6ce98a1a73
+Authorization: Bearer {{jwt}}
+
+
+### UPLOAD a Document
+POST http://localhost:3000/documents/upload
+Authorization: Bearer {{jwt}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+James
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="paternalSurname"
+
+Jackson
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="maternalSurname"
+
+Brown
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="sex"
+
+Male
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="nativity"
+
+Jesus
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="countryNationality"
+
+United Kindom
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="countryCitizenship"
+
+United States
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="dateOfBirth"
+
+2023-04-01T12:44:00+01:00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="cityOfBirth"
+
+London
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="addressResidency"
+
+1 Residency Street
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="addressDomicile"
+
+2 Domicile Street
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="idPassport"
+
+PASSPORT_NUMBER_78232837
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="driversLicenceNumber"
+
+DRIVERS_LICENCE_NUMBER_2527527653
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="notes"
+
+Here are some notes.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="fileIDCard"; filename="chemical.pdf"
+Content-Type: application/pdf
+
+< /Users/deepakbhari/Desktop/chemical.pdf
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="filePassportPhoto"; filename="mouse.jpg"
+Content-Type: image/jpeg
+
+< /Users/deepakbhari/Desktop/mouse.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="fileDriversLicencePhoto"; filename="squirrel.jpg"
+Content-Type: image/jpeg
+
+< /Users/deepakbhari/Desktop/squirrel.jpg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+### UPDATE a Document
+PATCH http://localhost:3000/documents/set-status
+Authorization: Bearer {{jwt}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="firstName"
+
+James
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="paternalSurname"
+
+Jackson
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="maternalSurname"
+
+Brown
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="sex"
+
+Male
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="nativity"
+
+Jesus
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="countryNationality"
+
+United Kindom
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="countryCitizenship"
+
+United States
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="dateOfBirth"
+
+2023-04-01T12:44:00+01:00
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="cityOfBirth"
+
+London
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="addressResidency"
+
+1 Residency Street
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="addressDomicile"
+
+2 Domicile Street
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="idPassport"
+
+PASSPORT_NUMBER_78232837
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="driversLicenceNumber"
+
+DRIVERS_LICENCE_NUMBER_2527527653
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="notes"
+
+Here are some notes.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="certifiedHash"
+
+the-certified-hash-here
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="status"
+
+APPROVED
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="hash"
+
+6da71f3fe19e43d9767efa997ad8aec4
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+
+

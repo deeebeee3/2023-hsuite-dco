@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ 'DASHBOARD.TAB' | translate }}
+    </ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar placeholder="{{ 'DASHBOARD.DOCUMENTS_SEARCH_PLACEHOLDER' | translate }}" (ionChange)="searchDocuments($event)"></ion-searchbar>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'DASHBOARD.DOCUMENTS_TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item button *ngFor="let document of filteredDocuments">
+          <ion-icon slot="start" name="document" [color]="getStatusColor(document.status)"></ion-icon>
+          <ion-label>
+            <h2>{{ document.id }}</h2>
+            <h3>{{'DASHBOARD.DOCUMENTS_STATUS.STATUS_LABEL' | translate}}: {{'DASHBOARD.DOCUMENTS_STATUS.' + document.status.toUpperCase() | translate }}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,129 @@
+{
+  "APP_NAME": "Register Office",
+  "LOGIN": {
+    "TITLE": "Login",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Password",
+    "EMAIL_REQUIRED": "Email is required",
+    "PASSWORD_REQUIRED": "Password is required",
+    "LOGIN_BUTTON": "Login",
+    "REGISTER_BUTTON": "Register",
+    "RECOVER_PASSWORD_BUTTON": "Recover Password",
+    "RECOVER_PASSWORD_TOAST_MESSAGE": "Password recovery email sent"
+  },
+  "REGISTER": {
+    "TITLE": "Register",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Password",
+    "CONFIRM_PASSWORD_LABEL": "Confirm Password",
+    "EMAIL_REQUIRED": "Email is required",
+    "PASSWORD_REQUIRED": "Password is required",
+    "CONFIRM_PASSWORD_REQUIRED": "Confirm Password is required",
+    "REGISTER_BUTTON": "Register",
+    "LOGIN_BUTTON": "Login"
+  },
+  "RECOVER_PASSWORD": {
+    "TITLE": "Recover Password",
+    "EMAIL_LABEL": "Email",
+    "EMAIL_REQUIRED": "Email is required",
+    "RECOVER_PASSWORD_BUTTON": "Recover Password",
+    "LOGIN_BUTTON": "Login"
+  },
+  "PROFILE": {
+    "TAB": "Profile",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Password",
+    "SAVE_CHANGES_BUTTON": "Save Changes",
+    "DELETE_ACCOUNT_BUTTON": "Delete Account",
+    "DELETE_ACCOUNT_ALERT": {
+      "HEADER": "Delete Account",
+      "MESSAGE": "Are you sure you want to delete your account?",
+      "CANCEL_BUTTON": "Cancel",
+      "DELETE_BUTTON": "Delete"
+    }
+  },
+  "DASHBOARD": {
+    "TAB": "Dashboard",
+    "DOCUMENTS_TITLE": "My Documents",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Search Documents",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Status",
+      "PENDING": "Pending",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    }
+  },
+  "DOCUMENTS": {
+    "TAB": "Documents",
+    "SUBMIT_FORM": {
+      "PHOTO_LABEL": "Passport Photo (PDF/JPG)",
+      "PHOTO_SUBTITLE": "Please upload a photo of yourself in a passport format.",
+      "TITLE": "Submit Form",
+      "FIRSTNAME_LABEL": "First Name",
+      "FIRSTNAME_PLACEHOLDER": "Enter your first name",
+      "PATERNAL_SURNAME_LABEL": "Paternal Surname",
+      "PATERNAL_SURNAME_PLACEHOLDER": "Enter your paternal surname",
+      "MATERNAL_SURNAME_LABEL": "Maternal Surname",
+      "MATERNAL_SURNAME_PLACEHOLDER": "Enter your maternal surname",
+      "GENDER_LABEL": "Select your gender",
+      "GENDER_SELECT_PLACEHOLDER": "Select your gender",
+      "GENDER_OPTIONS": {
+        "MALE": "Male",
+        "FEMALE": "Female"
+      },
+      "NATIVITY_LABEL": "Nativity",
+      "NATIVITY_PLACEHOLDER": "Enter your nativity",
+      "COUNTRY_OF_NATIONALITY_LABEL": "Nationality",
+      "COUNTRY_OF_NATIONALITY_PLACEHOLDER": "Select your Nationality",
+      "COUNTRY_OF_CITIZENSHIP_LABEL": "Citizenship",
+      "COUNTRY_OF_CITIZENSHIP_PLACEHOLDER": "Select your country of citizenship",
+      "DATE_OF_BIRTH_LABEL": "Date of Birth",
+      "DATE_OF_BIRTH_PLACEHOLDER": "Select your date of birth",
+      "CITY_OF_BIRTH_LABEL": "City of Birth",
+      "CITY_OF_BIRTH_PLACEHOLDER": "Enter your city of birth",
+      "ADDRESS_RESIDENCY_LABEL": "Residency Address",
+      "ADDRESS_RESIDENCY_PLACEHOLDER": "Enter your residency address",
+      "ADDRESS_DOMICILE_LABEL": "Domicile Address",
+      "ADDRESS_DOMICILE_PLACEHOLDER": "Enter your domicile address",
+      "PASSPORT_ID_LABEL": "Passport",
+      "PASSPORT_ID_PLACEHOLDER": "Enter your passport ID number",
+      "DRIVERS_LICENCE_ID_LABEL": "Drivers Licence",
+      "DRIVERS_LICENCE_ID_PLACEHOLDER": "Enter your drivers licence number",
+      "NOTES_LABEL": "Notes",
+      "NOTES_PLACEHOLDER": "Please insert in this field all the necessary info you wish to notify to the Administration to upload on your new ID document, such as a new Residency Address, Mother's Surname, etc.",
+      "ID_CARD_LABEL": "ID Card (PDF/JPG)",
+      "DRIVERS_LICENCE_PHOTO_LABEL": "Drivers Licence (PDF/JPG)",
+
+      "DRAG_AND_DROP_LABEL": "Drag and drop your file here",
+      "CHOOSE_FILE_LABEL": "Choose File",
+      "SUBMIT_BUTTON": "Submit"
+    }
+  },
+  "ADMIN": {
+    "TAB": "Admin",
+    "TITLE": "Administrate Users Documents",
+    "PENDING_BADGE": "Pending Documents: ",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Search Documents",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Status",
+      "PENDING": "Pending",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    },
+    "ADMIN_FORM": {
+      "TITLE": "Submit User Data for Document Approval",
+      "SUBTITLE": "Please provide the user data in the form below to approve the document.",
+      "CERTIFIED_HASH_LABEL": "Certified Hash",
+      "CERTIFIED_HASH_PLACEHOLDER": "Enter the certified hash"
+    }
+  },
+  "LOGOUT": {
+    "TAB": "Logout",
+    "LOGOUT_ALERT": {
+      "CONFIRMATION": "Confirmation",
+      "LOGOUT_CONFIRMATION": "Are you sure you want to logout?",
+      "CANCEL": "Cancel",
+      "LOGOUT": "Logout"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RpbmdAbWFpbGluYXRvci5jb20iLCJzdWIiOiIyZGRmYjE5Ni04YjdhLTRiM2ItYWJmOC0yM2YxZjI1YTg2N2QiLCJpYXQiOjE2ODk5NDc2MTEsImV4cCI6MTY5MDAzNDAxMX0.Q1JjKRn0cqMqS2cqYHrKl8_Y1KaSSg1q05FrJdhhJtM"
+    }
+  }
+}

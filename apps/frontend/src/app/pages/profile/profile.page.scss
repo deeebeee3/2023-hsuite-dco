@@ -1,0 +1,30 @@
+
+.profile-card {
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-image {
+  text-align: center;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.profile-inputs {
+  margin-top: 20px;
+}
+
+ion-item {
+  margin-bottom: 10px;
+}
+
+ion-button.delete-button {
+  display: block;
+  margin: 20px auto 0;
+  width: 100%;
+}

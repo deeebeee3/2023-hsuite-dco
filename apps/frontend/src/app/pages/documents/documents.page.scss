@@ -1,0 +1,80 @@
+.submit-card {
+  border-radius: 10px;
+  // background-color: #1f1f1f;
+  // padding: 20px;
+  // margin: 20px;
+}
+
+form {
+  ion-item{
+    padding: 10px 0px;
+    border: 0px solid transparent;
+    border-radius: 10px;
+  }
+  ion-item::part(native){
+    background: transparent;
+  }
+}
+
+ion-label {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
+ion-input, ion-select {
+  border-radius: 5px;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+}
+
+ion-datetime {
+  border-radius: 10px;
+}
+
+.submit-button {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#dropzone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  max-width: 350px;
+  border: 2px dashed rgb(128, 128, 128);
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#dropzone ion-button {
+  margin-top: 10px;
+}
+
+#dropzone ion-icon {
+  font-size: 2rem;
+}
+
+#dropzone ion-label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.notes-textarea{
+  background: transparent;
+  border: 2px solid rgba(128, 128, 128, 0.5);
+  height: 200px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+

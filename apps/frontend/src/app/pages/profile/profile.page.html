@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profile</ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-card class="profile-card">
+
+    <div class="profile-image">
+      <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
+      <h1>User1234</h1>
+    </div>
+
+    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+      <div class="profile-inputs">
+        <ion-item>
+          <ion-label>{{ 'PROFILE.EMAIL_LABEL' | translate }}</ion-label>
+          <ion-input type="email" formControlName="email" [(ngModel)]="formUserEmail" (keyup)="onInputChange()"
+            placeholder="{{ storedUserEmail }}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>{{ 'PROFILE.PASSWORD_LABEL' | translate }}</ion-label>
+          <ion-input type="{{ passwordVisible ? 'text' : 'password' }}" formControlName="password"
+           [(ngModel)]="formUserPassword" placeholder="*********" (keyup)="onInputChange()"></ion-input>
+          <ion-button *ngIf="formUserPassword !== ''" fill="clear" color="dark"
+            (click)="togglePasswordVisibility()">
+            <ion-icon name="{{ passwordVisible ? 'eye-off-outline' : 'eye-outline' }}"></ion-icon>
+          </ion-button>
+        </ion-item>
+
+      </div>
+
+      <ion-button *ngIf="isFormDifferent" type="submit" class="save-button" color="success" shape="round" fill="clear" size="small">
+        <ion-icon name="save-outline"></ion-icon>
+        {{ "PROFILE.SAVE_CHANGES_BUTTON" | translate}}
+      </ion-button>
+
+    </form>
+
+    <ion-button class="delete-button" color="danger" shape="round" fill="clear" size="small" (click)="deleteAccount()">
+      <ion-icon name="trash-outline"></ion-icon>
+      {{ "PROFILE.DELETE_ACCOUNT_BUTTON" | translate}}
+    </ion-button>
+  </ion-card>
+
+  <!-- Go to /admin page -->
+  <!-- <ion-button class="admin-button" color="dark" shape="round" fill="clear" size="small" (click)="goToAdminPage()">
+    <ion-icon name="settings-outline"></ion-icon>
+    Go to admin page
+  </ion-button> -->
+
+</ion-content>

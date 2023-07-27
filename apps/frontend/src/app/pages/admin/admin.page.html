@@ -1,0 +1,52 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{'ADMIN.TAB' | translate}}</ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class='ion-text-center'>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{'ADMIN.TITLE' | translate}}</ion-card-title>
+      <ion-badge color="light" *ngIf="documents.length > 0">{{'ADMIN.PENDING_BADGE'| translate}} {{PendingDocs}}</ion-badge>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-searchbar placeholder="{{'ADMIN.DOCUMENTS_SEARCH_PLACEHOLDER' | translate}}"
+        (ionChange)="searchDocuments($event)"></ion-searchbar>
+
+      <div>
+        <ion-chip (click)="filterDocuments('PENDING')"
+          [color]="filterBy == 'PENDING' ? getStatusColor('PENDING') : 'dark'">
+          <ion-label>{{'ADMIN.DOCUMENTS_STATUS.PENDING'| translate}}</ion-label>
+        </ion-chip>
+        <ion-chip (click)="filterDocuments('APPROVED')"
+          [color]="filterBy == 'APPROVED' ? getStatusColor('APPROVED') : 'dark'">
+          <ion-label>{{'ADMIN.DOCUMENTS_STATUS.APPROVED'| translate}}</ion-label>
+        </ion-chip>
+        <ion-chip (click)="filterDocuments('REJECTED')"
+          [color]="filterBy == 'REJECTED' ? getStatusColor('REJECTED') : 'dark'">
+          <ion-label>{{'ADMIN.DOCUMENTS_STATUS.REJECTED'| translate}}</ion-label>
+        </ion-chip>
+      </div>
+
+      <ion-list>
+        <ion-item button *ngFor="let docs of filteredDocuments" (click)="changeDocumentStatus(docs)">
+          <ion-icon slot="start" name="document" [color]="getStatusColor(docs.status)"></ion-icon>
+          <ion-label>
+            <h2>{{ docs.hash }}</h2>
+            <h3>{{'ADMIN.DOCUMENTS_STATUS.STATUS_LABEL'| translate}}: {{'ADMIN.DOCUMENTS_STATUS.' +
+              docs.status.toUpperCase() | translate}}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

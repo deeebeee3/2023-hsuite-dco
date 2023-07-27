@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'REGISTER.TITLE' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>{{ 'REGISTER.TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+        <ion-item lines="full">
+          <ion-label position="floating">{{ 'REGISTER.EMAIL_LABEL' | translate }}</ion-label>
+          <ion-input type="email" formControlName="email" required></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="registerForm.controls['email'].errors?.['required'] && registerForm.controls['email'].touched">
+          {{ 'REGISTER.EMAIL_REQUIRED' | translate }}
+        </ion-text>
+
+        <ion-item lines="full">
+          <ion-label position="floating">{{ 'REGISTER.PASSWORD_LABEL' | translate }}</ion-label>
+          <ion-input type="password" formControlName="password" required></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="registerForm.controls['password'].errors?.['required'] && registerForm.controls['password'].touched">
+          {{ 'REGISTER.PASSWORD_REQUIRED' | translate }}
+        </ion-text>
+
+        <ion-item lines="full">
+          <ion-label position="floating">{{ 'REGISTER.CONFIRM_PASSWORD_LABEL' | translate }}</ion-label>
+          <ion-input type="password" formControlName="confirmPassword" required></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="registerForm.controls['confirmPassword'].errors?.['required'] && registerForm.controls['confirmPassword'].touched">
+          {{ 'REGISTER.CONFIRM_PASSWORD_REQUIRED' | translate }}
+        </ion-text>
+
+        <ion-button type="submit" expand="block" [disabled]="registerForm.invalid">{{ 'REGISTER.REGISTER_BUTTON' | translate }}</ion-button>
+
+      </form>
+
+      <p class="ion-text-center">
+        <a routerLink="/login">{{ 'REGISTER.LOGIN_BUTTON' | translate }}</a>
+      </p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+</ion-content>

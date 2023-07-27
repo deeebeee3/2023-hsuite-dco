@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'LOGIN.TITLE' | translate }}</ion-title>
+    <ion-buttons slot="end">
+      <language-toggle></language-toggle>
+      <theme-toggle></theme-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'LOGIN.TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+        <ion-item lines="full">
+          <ion-label position="floating">{{ 'LOGIN.EMAIL_LABEL' | translate }}</ion-label>
+          <ion-input formControlName="username" type="email"></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="loginForm.controls['username'].errors?.['required'] && loginForm.controls['username'].touched">
+          {{ 'LOGIN.EMAIL_REQUIRED' | translate }}
+        </ion-text>
+
+        <ion-item lines="full">
+          <ion-label position="floating">{{ 'LOGIN.PASSWORD_LABEL' | translate }}</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="loginForm.controls['password'].errors?.['required'] && loginForm.controls['password'].touched">
+          {{ 'LOGIN.PASSWORD_REQUIRED' | translate }}
+        </ion-text>
+
+        <ion-button type="submit" [disabled]="loginForm.invalid || submitted" expand="block">{{ 'LOGIN.LOGIN_BUTTON' | translate }}</ion-button>
+
+      </form>
+
+
+      <p class="ion-text-center">
+        <a routerLink="/register">{{ 'LOGIN.REGISTER_BUTTON' | translate }}</a>
+        <br>
+        <a routerLink="/recover-password">{{ 'LOGIN.RECOVER_PASSWORD_BUTTON' | translate }}</a>
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

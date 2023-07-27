@@ -1,0 +1,138 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'DOCUMENTS.SUBMIT_FORM.TITLE' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>{{'ADMIN.ADMIN_FORM.TITLE' | translate}}</ion-card-title>
+      <ion-card-subtitle
+        >{{'ADMIN.ADMIN_FORM.SUBTITLE' | translate}}</ion-card-subtitle
+      >
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="submitForm" (ngSubmit)="changeDocumentStatus()">
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.FIRSTNAME_LABEL' | translate}}</ion-label
+          >
+          <ion-input
+            formControlName="name"
+            type="text"
+            fill="outline"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.FIRSTNAME_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.PATERNAL_SURNAME_LABEL' |
+            translate}}</ion-label
+          >
+          <ion-input
+            formControlName="surname"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.PATERNAL_SURNAME_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.GENDER_LABEL' | translate}}</ion-label
+          >
+          <ion-select
+            formControlName="gender"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.GENDER_SELECT_PLACEHOLDER' | translate}}"
+          >
+            <ion-select-option value="male"
+              >{{'DOCUMENTS.SUBMIT_FORM.GENDER_OPTIONS.MALE' |
+              translate}}</ion-select-option
+            >
+            <ion-select-option value="female"
+              >{{'DOCUMENTS.SUBMIT_FORM.GENDER_OPTIONS.FEMALE' |
+              translate}}</ion-select-option
+            >
+          </ion-select>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.DATE_OF_BIRTH_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-datetime
+            presentation="date"
+            formControlName="dateOfBirth"
+          ></ion-datetime>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_BIRTH_LABEL' | translate
+            }}</ion-label
+          >
+          <ion-input
+            formControlName="cityOfBirth"
+            type="text"
+            readonly="true"
+            (click)="openCountriesPopover($event)"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.COUNTRY_OF_BIRTH_PLACEHOLDER' | translate}}"
+            [value]="selectedCountry || ''"
+          >
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_LABEL' | translate }}</ion-label
+          >
+          <ion-input
+            formControlName="address"
+            type="text"
+            placeholder="{{ 'DOCUMENTS.SUBMIT_FORM.ADDRESS_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'DOCUMENTS.SUBMIT_FORM.NOTES_LABEL' | translate}}</ion-label
+          >
+          <textarea
+            formControlName="notes"
+            type="text"
+            class="notes-textarea"
+            placeholder="{{'DOCUMENTS.SUBMIT_FORM.NOTES_PLACEHOLDER' | translate}}"
+          ></textarea>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-label position="stacked"
+            >{{'ADMIN.ADMIN_FORM.CERTIFIED_HASH_LABEL' | translate}}</ion-label
+          >
+          <ion-input
+            formControlName="certified_Hash"
+            type="text"
+            fill="outline"
+            placeholder="{{ 'ADMIN.ADMIN_FORM.CERTIFIED_HASH_PLACEHOLDER' | translate }}"
+          ></ion-input>
+        </ion-item>
+
+        <ion-button
+          type="submit"
+          expand="block"
+          [disabled]="!submitForm.valid || waitingResponse"
+          class="submit-button ion-margin-top"
+          (click)="openLoader()"
+        >
+          {{ 'DOCUMENTS.SUBMIT_FORM.SUBMIT_BUTTON' | translate }}
+        </ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,17 @@
+### SIGN UP a user
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+
+{
+    "email": "testing@mailinator.com", 
+    "password": "Testing123"
+}
+
+### LOGIN a user
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "testing@mailinator.com", 
+    "password": "Testing123"
+}

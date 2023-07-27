@@ -1,0 +1,129 @@
+{
+  "APP_NAME": "Registro de Escritório",
+  "LOGIN": {
+    "TITLE": "Entrar",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Senha",
+    "EMAIL_REQUIRED": "Email é obrigatório",
+    "PASSWORD_REQUIRED": "Senha é obrigatória",
+    "LOGIN_BUTTON": "Entrar",
+    "REGISTER_BUTTON": "Registrar",
+    "RECOVER_PASSWORD_BUTTON": "Recuperar Senha",
+    "RECOVER_PASSWORD_TOAST_MESSAGE": "Email de recuperação de senha enviado"
+  },
+  "REGISTER": {
+    "TITLE": "Registrar",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Senha",
+    "CONFIRM_PASSWORD_LABEL": "Confirmar Senha",
+    "EMAIL_REQUIRED": "Email é obrigatório",
+    "PASSWORD_REQUIRED": "Senha é obrigatória",
+    "CONFIRM_PASSWORD_REQUIRED": "Confirmação de senha é obrigatória",
+    "REGISTER_BUTTON": "Registrar",
+    "LOGIN_BUTTON": "Entrar"
+  },
+  "RECOVER_PASSWORD": {
+    "TITLE": "Recuperar Senha",
+    "EMAIL_LABEL": "Email",
+    "EMAIL_REQUIRED": "Email é obrigatório",
+    "RECOVER_PASSWORD_BUTTON": "Recuperar Senha",
+    "LOGIN_BUTTON": "Entrar"
+  },
+  "PROFILE": {
+    "TAB": "Perfil",
+    "EMAIL_LABEL": "Email",
+    "PASSWORD_LABEL": "Senha",
+    "SAVE_CHANGES_BUTTON": "Salvar Alterações",
+    "DELETE_ACCOUNT_BUTTON": "Excluir Conta",
+    "DELETE_ACCOUNT_ALERT": {
+      "HEADER": "Excluir Conta",
+      "MESSAGE": "Tem certeza de que deseja excluir sua conta?",
+      "CANCEL_BUTTON": "Cancelar",
+      "DELETE_BUTTON": "Excluir"
+    }
+  },
+  "DASHBOARD": {
+    "TAB": "Dashboard",
+    "DOCUMENTS_TITLE": "Meus Documentos",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Pesquisar Documentos",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Status",
+      "PENDING": "Pendente",
+      "APPROVED": "Aprovado",
+      "REJECTED": "Rejeitado"
+    }
+  },
+  "DOCUMENTS": {
+    "TAB": "Documentos",
+    "SUBMIT_FORM": {
+      "PHOTO_LABEL": "Foto de Identidade (PDF/JPG)",
+      "PHOTO_SUBTITLE": "Por favor, envie uma foto sua em formato de passaporte.",
+      "TITLE": "Formulário de Envio",
+      "FIRSTNAME_LABEL": "Primeiro nome",
+      "FIRSTNAME_PLACEHOLDER": "Digite seu primeiro nome",
+      "PATERNAL_SURNAME_LABEL": "Sobrenome paterno",
+      "PATERNAL_SURNAME_PLACEHOLDER": "Digite seu sobrenome paterno",
+      "MATERNAL_SURNAME_LABEL": "Sobrenome materno",
+      "MATERNAL_SURNAME_PLACEHOLDER": "Digite seu sobrenome materno",
+      "GENDER_LABEL": "Selecione o seu sexo",
+      "GENDER_SELECT_PLACEHOLDER": "Selecione o seu sexo",
+      "GENDER_OPTIONS": {
+        "MALE": "Macho",
+        "FEMALE": "Fêmea"
+      },
+      "NATIVITY_LABEL": "natividade",
+      "NATIVITY_PLACEHOLDER": "Digite sua natividade",
+      "COUNTRY_OF_NATIONALITY_LABEL": "Nacionalidade",
+      "COUNTRY_OF_NATIONALITY_PLACEHOLDER": "Selecione sua nacionalidade",
+      "COUNTRY_OF_CITIZENSHIP_LABEL": "Cidadania",
+      "COUNTRY_OF_CITIZENSHIP_PLACEHOLDER": "Selecione seu país de cidadania",
+      "DATE_OF_BIRTH_LABEL": "Data de nascimento",
+      "DATE_OF_BIRTH_PLACEHOLDER": "Selecione a sua data de nascimento",
+      "CITY_OF_BIRTH_LABEL": "Cidade de nascimento",
+      "CITY_OF_BIRTH_PLACEHOLDER": "Entre na sua cidade de nascimento",
+      "ADDRESS_RESIDENCY_LABEL": "Endereço de residência",
+      "ADDRESS_RESIDENCY_PLACEHOLDER": "Digite seu endereço de residência",
+      "ADDRESS_DOMICILE_LABEL": "Endereço de domicílio",
+      "ADDRESS_DOMICILE_PLACEHOLDER": "Digite seu endereço de domicílio",
+      "PASSPORT_ID_LABEL": "Passaporte",
+      "PASSPORT_ID_PLACEHOLDER": "Digite seu número de identificação de passaporte",
+      "DRIVERS_LICENCE_ID_LABEL": "Carteira de motorista",
+      "DRIVERS_LICENCE_ID_PLACEHOLDER": "Digite seu número de carteira de motorista",
+      "NOTES_LABEL": "Notas",
+      "NOTES_PLACEHOLDER": "Insira neste campo todas as informações necessárias que você deseja notificar à administração para fazer upload em seu novo documento de identificação, como um novo endereço de residência, sobrenome da mãe, etc.",
+      "ID_CARD_LABEL": "Carteira de identidade (PDF/JPG)",
+      "DRIVERS_LICENCE_PHOTO_LABEL": "Carteira de motorista (PDF/JPG)",
+
+      "DRAG_AND_DROP_LABEL": "Arraste e solte o seu arquivo aqui",
+      "CHOOSE_FILE_LABEL": "Escolher arquivo",
+      "SUBMIT_BUTTON": "Enviar"
+    }
+  },
+  "ADMIN": {
+    "TAB": "Admin",
+    "TITLE": "Administrar Documentos de Usuários",
+    "PENDING_BADGE": "Documentos Pendentes: ",
+    "DOCUMENTS_SEARCH_PLACEHOLDER": "Pesquisar Documentos",
+    "DOCUMENTS_STATUS": {
+      "STATUS_LABEL": "Status",
+      "PENDING": "Pendente",
+      "APPROVED": "Aprovado",
+      "REJECTED": "Rejeitado"
+    },
+    "ADMIN_FORM": {
+      "TITLE": "Enviar Dados do Usuário para Aprovação do Documento",
+      "SUBTITLE": "Por favor, forneça os dados do usuário no formulário abaixo para aprovar o documento.",
+      "CERTIFIED_HASH_LABEL": "Hash certificado",
+      "CERTIFIED_HASH_PLACEHOLDER": "Digite o hash certificado"
+    }
+  },
+  "LOGOUT": {
+    "TAB": "Sair",
+    "LOGOUT_ALERT": {
+      "CONFIRMATION": "Confirmação",
+      "LOGOUT_CONFIRMATION": "Tem certeza de que deseja sair?",
+      "CANCEL": "Cancelar",
+      "LOGOUT": "Sair"
+    }
+  }
+}

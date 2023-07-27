@@ -1,0 +1,32 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="profile">
+      <ion-icon aria-hidden="true" color="dark" name="person-outline"></ion-icon>
+      <ion-label>{{ 'PROFILE.TAB' | translate }}</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="dashboard">
+      <ion-icon aria-hidden="true" color="dark"name="speedometer-outline"></ion-icon>
+      <ion-label>{{ 'DASHBOARD.TAB' | translate }}</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="documents">
+      <ion-icon aria-hidden="true" color="dark" name="documents-outline"></ion-icon>
+      <ion-label>{{ 'DOCUMENTS.TAB' | translate }}</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="admin" *ngIf="userAdmin | async">
+      <ion-icon aria-hidden="true" color="dark" name="lock-closed-outline"></ion-icon>
+      <ion-label>Admin</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="logout()">
+      <ion-icon aria-hidden="true" color="dark" name="log-out-outline"></ion-icon>
+      <ion-label>{{ 'LOGOUT.TAB' | translate }}</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
