@@ -15,3 +15,103 @@ Run `npx nx connect-to-nx-cloud` to enable [remote caching](https://nx.app) and 
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more.
+
+-----------------------------------------------------------
+
+# DECENTRALIZED REGISTRY OFFICE NOTES
+
+git checkout develop && git pull origin develop
+
+git fetch --prune 
+
+git branch -D create-nest-js-app
+
+----------
+
+
+In order to run the frontend, you can easily go to:
+
+cd apps/frontend && run ionic serve 
+
+in order to run the backend, you can easily go to 
+
+cd apps/backend && run npm run start:dev
+
+after you do the checkout, and every time you do a git pull, or generally speaking whenever you need to update the packages, 
+you must do it from root dir, so you go to root dir and execute 
+
+npm install - for the all at once
+
+if you want to test the work of your team mate, 
+
+you can use localhost: 
+
+- http://localhost:3000/ for backend 
+- http://localhost:8100/ for frontend
+
+keep in mind, use ngrok only when you're working together, so it facilitates the 
+on-the-fly changes from backend, and the frontend development/testing in real time
+
+----------
+
+## IONIC
+
+If ionic serve is not running:
+
+please upgrade to node LTS v18.12.0 at very first.
+
+Make sure the in terminal the current version is the LTS from wherever your going to run npm install...
+
+Install @angular/cli and @ionic/cli
+
+Then from root dir, please run:
+
+rm -rf package-lock.json node_modules
+
+Then
+
+npm install
+
+Then:
+
+ok then try to revert it, by doing 
+
+git checkout package-lock.json
+
+----------
+
+## PROTON MAIL ACCOUNTS
+
+Admin:
+dco-administrator@protonmail.com
+DCO-ADMIN123
+
+Backend:
+dco-backend@protonmail.com
+DCO-BACKEND123
+
+Please use this: 
+decentralizedregistryoffice@protonmail.com 
+decentralizedregistryoffice
+
+----------
+
+## DATABASE CONNECTION string (CompassDB)
+
+mongodb+srv://dro_testnet:XjOJWtnKSHYem23R@drotestnetcluster.juphbwv.mongodb.net/test
+
+----------
+
+## COMPASS (DB App)
+
+In the Compass App terminal, please run:
+
+use <db_name>
+
+use test
+
+> already on db test
+
+db.documents.find( { "status": "PENDING" } );
+
+db.documents.deleteMany( { "status": "APPROVED" } );
